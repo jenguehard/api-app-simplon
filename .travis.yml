@@ -10,7 +10,7 @@ before_install:
   - echo 'test'
   # install heroku CLI
   - wget -qO- https://toolbelt.heroku.com/install.sh | sh
-  - echo "$HEROKU_PASSWORD" | docker login -u "$HEROKU_USERNAME" --password-stdin registry.heroku.com
+  - heroku login
   - echo "machine api"
   - heroku container:login
 
